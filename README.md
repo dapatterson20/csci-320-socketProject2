@@ -16,7 +16,7 @@ Note: This mini-project is intended to provide practice in socket programming.  
 The algorithms described below implement the following simple protocol.
 
 <figure style="text-align:center;">
-	<img src="fileTransferProtocol.png" height="600"></div>
+	<img src="TCPFileTransferProtocol.png" height="600"></div>
 	<figcaption style="font-weight:bold; color:#0055ee;">Figure 1: Simple file transfer protocol.</figcaption>
 </figure>
 
@@ -28,7 +28,7 @@ The server should:
 2. Receive a message from the client using the `recv` function.
 3. Decompose the message into an 8-byte integer representing file size. The rest of the bytes should be decoded into a string representing the file name. Use `get_file_info()`.
 4. send `b'go ahead'` message to the client.
-5. Using the filename provided, open the file for writing using the with python statement. **NOTE: since you will be transferring a file over localhost to the same directory, it is important that you modify the filename, say by adding a *.temp* extension, to avoid overwriting the original file.** (Implemented)
+5. Using the filename provided, open the file for writing using the `with` python statement. **NOTE: since you will be transferring a file over localhost to the same directory, it is important that you modify the filename, say by adding a *.temp* extension, to avoid overwriting the original file.** (Implemented)
 6. Inside the *with* statement, 
 	<ol type="a">
 	<li>Receive a chunk of data.</li>
@@ -38,7 +38,7 @@ The server should:
 	</ol>
 7. If an exception occurs, the file should be deleted. (Implemented)
 8. Close the client socket. (Implemented)
-9. Repeat steps 2 - 8. 
+9. Repeat steps 2 - 8. (Implemented)
 
 ## 2. Implementing the Client
 
